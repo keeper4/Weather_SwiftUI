@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct Weather_SwiftUIApp: App {
+    private let appFactory = AppFactory()
+
     var body: some Scene {
         WindowGroup {
-            CitysView()
+            AppCoordinatorView(
+                screenFactory: ScreenFactory(appFactory: appFactory),
+                coordinator: AppCoordinator()
+            )
+            .preferredColorScheme(.dark)
         }
     }
 }

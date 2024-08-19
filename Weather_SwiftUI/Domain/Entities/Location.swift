@@ -8,7 +8,6 @@
 import Foundation
 
 struct Location: Codable {
-    var id: String = UUID().uuidString
     let name: String
     let country: String
 }

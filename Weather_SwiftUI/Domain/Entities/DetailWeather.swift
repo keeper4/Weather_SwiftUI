@@ -9,12 +9,11 @@ import Foundation
 
 struct DetailWeather: Codable {
     
-    var id: String = UUID().uuidString
-    let observationTime:       String
+    let observation_time:       String
     let temperature:           Double
     let weather_icons:         [String]
-    let windSpeed:             Int
-    let windDir:               String
+    let wind_speed:             Int
+    let wind_dir:               String
     let humidity:              Int
     
     var weatherURL:          URL? {

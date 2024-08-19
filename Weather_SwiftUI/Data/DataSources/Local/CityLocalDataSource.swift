@@ -15,7 +15,7 @@ final class CityLocalDataSource: LocalDataSource {
     @RealmActor
     func loadCurrentWeather(city: String) async -> ResponsWeatherObject? {
         guard let storage = await realmProvider.realm() else { return nil }
-        return storage.objects(ResponsWeatherObject.self).filter { $0.locationObject.name == city }.first
+        return storage.objects(ResponsWeatherObject.self).filter { $0.locationObject?.name == city }.first
     }
 }
 

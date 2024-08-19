@@ -21,7 +21,7 @@ enum CityNetworkConfig: NetworkConfig {
     var task: HTTPTask {
         switch self {
         case .detailsByCity(let city):
-            return .requestUrlParameters(["query": city, "access_key": "3fcb0b74e873e9089bcbc892b92bd7a7"])
+            return .requestUrlParameters(["access_key": "3fcb0b74e873e9089bcbc892b92bd7a7", "query": city])
         }
     }
     

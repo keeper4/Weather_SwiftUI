@@ -9,6 +9,17 @@ import SwiftUI
 
 enum LocalizedKey {
 
+    enum CitysView {
+        static let title = LocalizedStringKey("CitysView.title")
+    }
+    
+    enum CurrentView {
+        static let temperature = LocalizedStringKey("CurrentView.temperature")
+        static let windSpeed = LocalizedStringKey("CurrentView.windSpeed")
+        static let windDir = LocalizedStringKey("CurrentView.windDir")
+        static let humidity = LocalizedStringKey("CurrentView.humidity")
+    }
+    
     enum ErrorMessage {
         static let error = LocalizedStringKey("Error")
 

@@ -34,11 +34,14 @@ final class NetworkService {
         let (data, response) = try await makeRequest(config: config, useToken: useToken)
 
         try handleResponse(response)
-        guard let model = try? decoder.decode(Model.self, from: data) else {
-            throw NetworkError.decodingError
+        do {
+            let decoded = try decoder.decode(Model.self, from: data)
+            return decoded
+        } catch {
+            print(error)
         }
 
-        return model
+        throw NetworkError.decodingError
     }
 
     func encode<Value: Encodable>(_ value: Value) throws -> Data {

@@ -1,0 +1,62 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CitysView.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select City"
+          }
+        }
+      }
+    },
+    "CurrentView.humidity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "humidity"
+          }
+        }
+      }
+    },
+    "CurrentView.temperature" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "temperature"
+          }
+        }
+      }
+    },
+    "CurrentView.windDir" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wind dir"
+          }
+        }
+      }
+    },
+    "CurrentView.windSpeed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wind speed"
+          }
+        }
+      }
+    },
+    "Error" : {
+
+    },
+    "loading.." : {
+
+    }
+  },
+  "version" : "1.0"
+}

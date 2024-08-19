@@ -9,18 +9,19 @@ import Foundation
 import RealmSwift
 
 final class ResponsWeatherObject: Object {
-    @Persisted var locationObject: LocationObject
-    @Persisted var currentObject: DetailWeatherObject
+    @Persisted(primaryKey: true) var id: String
+    @Persisted var locationObject: LocationObject?
+    @Persisted var currentObject: DetailWeatherObject?
 
     convenience init(_ responsWeather: ResponsWeather) {
         self.init()
-
         locationObject = LocationObject(responsWeather.location)
         currentObject  = DetailWeatherObject(responsWeather.current)
+        id = locationObject?.name ?? UUID().uuidString
     }
 
     func toDomain() -> ResponsWeather {
-        ResponsWeather(location: locationObject.toDomain(),
-                       current: currentObject.toDomain())
+        ResponsWeather(location: locationObject!.toDomain(),
+                       current: currentObject!.toDomain())
     }
 }

@@ -9,6 +9,6 @@ import Foundation
 
 struct ResponsWeather: Codable {
 
-    let location: Location!
-    let current: DetailWeather!
+    let location: Location
+    let current: DetailWeather
 }
